@@ -17,7 +17,7 @@ git config --global user.name ChemaAymerich
 git init
 
 git commit -m "Proyecto vacío"
--------------------------------------------------------------------
+
 
 -------------------------------------------------------------------
                 INSTALACIÓN
@@ -25,5 +25,40 @@ git commit -m "Proyecto vacío"
 # Teniendo pip instalado
 
 pip install django djangorestframework
+
 -------------------------------------------------------------------
+                EJECUCIÓN DEL PROYECTO
+------------------------------------------------------------------- 
+# Migraciones -> Si devuelve No changes detected
+python .\manage.py makemigrations
+
+# Migración
+python .\manage.py migrate
+
+# Ejecución
+python .\manage.py runserver
+
+
+
+
+-------------------------------------------------------------------
+                CREACIÓN DEL PROYECTO DJANGO
+------------------------------------------------------------------- 
+# Teniendo pip instalado
+django-admin startproject IdentidadDigital
+
+ cd .\IdentidadDigital\
+
+ django-admin startapp API
+
+# [Identidad Digital] Añadir en settings.py la aplicaicón API y el rest_framework
+
+# [API] views editar
+
+# [API] crear archivo urls.py -> se encarga de alamacenar
+
+# [Identidad Digital] Incluir en urls.py la ruta de urls de API
+
+# [API] modificar urls.py -> para que coja el fichero views.py
+
 
